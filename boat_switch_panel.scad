@@ -59,11 +59,12 @@ module mounting_holes() {
     z = panel_thickness + 2;
     x_offset = panel_width/2 - mount_hole_offset_x;
     y_offset = panel_height/2 - mount_hole_offset_y;
-    for (corner = [[-1, -1], [1, -1], [-1, 1], [1, 1]])
-        translate([corner[0] * x_offset,
-                   corner[1] * y_offset,
-                   -1])
-            cylinder(h = z, d = corner_hole_diameter, $fn = 40);
+    for (x_sign = [-1, 1])
+        for (y_sign = [-1, 1])
+            translate([x_sign * x_offset,
+                       y_sign * y_offset,
+                       -1])
+                cylinder(h = z, d = corner_hole_diameter, $fn = 40);
 }
 
 module switch_holes() {
