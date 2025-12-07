@@ -1,31 +1,34 @@
 // Boat switch panel with embossed icons and rotated text
 // Adjust the parameters below to tweak panel, spacing, and embossing.
-panel_width = 130;          // overall width in mm
-panel_height = 80;          // overall height in mm
 panel_thickness = 3;        // base panel thickness
 corner_radius = 4;
 mount_hole_diameter = 4;
 mount_hole_offset = 6;      // distance from each edge to mounting hole center
 
-rows = 2;
-cols = 4;
+rows = 1;
+cols = 8;
 hole_diameter = 11;
 hole_clearance = 0.2;       // extra diameter for drilling clearance
 hole_spacing_x = 22;
 hole_spacing_y = 25;
+
+panel_margin_x = 34;        // margin from outer switch center to edge
+panel_margin_y = 20;        // margin above/below the switch row
+panel_width = (cols - 1) * hole_spacing_x + 2 * panel_margin_x;
+panel_height = hole_diameter + (rows - 1) * hole_spacing_y + 2 * panel_margin_y;
 
 icon_size = 12;
 icon_base_height = 0.5;
 emboss_height = 0.8;
 icon_gap = 3;               // gap between switch center and icon edge
 text_gap = 4;               // distance from switch perimeter to text baseline
-text_height = 8.5;
+text_height = 5.8;
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
     "INVERTER 220V",
     "MULTI MEDIA",
-    "INTERNET ANTENNA",
+    "WIFI",
     "MULTI MEDIA",
     "NIGHT LIGHT",
     "WEBASTO",
