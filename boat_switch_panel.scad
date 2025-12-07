@@ -34,10 +34,10 @@ labels = [
     "HI-FI",
     "WIFI",
     "HI-FI",
-    "NIGHT LIGHT",
-    "WEBASTO",
-    "SHORT BEAM",
-    "LONG BEAM"
+    "LIGHTS",
+    "HEATER",
+    "BEAM L",
+    "BEAM H"
 ];
 
 module boat_switch_panel() {
