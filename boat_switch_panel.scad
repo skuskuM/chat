@@ -109,81 +109,86 @@ module pictogram_tile(index) {
 
 module icon_shape(index) {
     if (index == 0)
-        icon_inverter();
+        icon_power_ac();
     else if (index == 1 || index == 3)
-        icon_media();
+        icon_audio_note();
     else if (index == 2)
-        icon_wifi_mast();
+        icon_wifi_signal();
     else if (index == 4)
-        icon_night_light();
+        icon_light_burst();
     else if (index == 5)
-        icon_heat_coils();
+        icon_heater_fan();
     else if (index == 6)
-        icon_short_beam();
+        icon_beam_low();
     else if (index == 7)
-        icon_long_beam();
+        icon_beam_high();
     else
         square([icon_size/2, icon_size/2], center = true);
 }
 
-module icon_inverter() {
+module icon_power_ac() {
     union() {
-        translate([-2.5, 0]) square([5, 6], center = true);
-        translate([1.5, 2]) square([2, 1.2], center = true);
-        translate([1.5, -2]) square([2, 1.2], center = true);
-        stroke_path(wave_points(6, 2, 6), 1.0);
+        translate([-2.5, 0]) square([4.8, 4.6], center = true);
+        translate([-4.2, 1.2]) square([1.2, 2.2], center = true);
+        translate([-4.2, -1.2]) square([1.2, 2.2], center = true);
+        translate([0.8, 0])
+            stroke_path([[0, 1.5], [1.5, -1.5], [3, 1.5]], 0.8);
+        translate([3.6, 0])
+            circle(r = 1.1, $fn = 40);
     }
 }
 
-module icon_media() {
+module icon_audio_note() {
     union() {
-        translate([-2, 0]) polygon(points=[[ -3, -3], [3, 0], [-3, 3]]);
-        translate([3, 0]) circle(r = 1.4, $fn = 24);
-        translate([1.8, 0]) square([1.2, 4], center = true);
-        translate([2.8, 1.6]) square([1.2, 2.4], center = true);
+        translate([-2.2, 0.5]) square([1.1, 5.8], center = true);
+        translate([0.8, 2.2]) square([1.1, 5.6], center = true);
+        translate([-2.2, -2.4]) circle(r = 1.7, $fn = 36);
+        translate([0.8, -1.1]) circle(r = 1.3, $fn = 36);
+        translate([-0.7, 3.5]) square([3.6, 0.9], center = true);
     }
 }
 
-module icon_wifi_mast() {
+module icon_wifi_signal() {
     union() {
-        translate([0, -3]) square([1.2, 6], center = true);
         for (i = [0 : 2])
             difference() {
-                circle(r = 2.5 + i * 1.5, $fn = 64);
-                circle(r = 1.5 + i * 1.5, $fn = 64);
+                circle(r = 1.8 + i * 1.4, $fn = 64);
+                circle(r = 0.8 + i * 1.4, $fn = 64);
             }
-        translate([0, 3.5]) circle(r = 0.9, $fn = 32);
+        translate([0, -2.4]) circle(r = 1.1, $fn = 32);
     }
 }
 
-module icon_night_light() {
-    difference() {
-        circle(r = 4.5, $fn = 48);
-        translate([1.5, 1.5]) circle(r = 4.5, $fn = 48);
-    }
-    for (angle = [30, 75, 120])
+module icon_light_burst() {
+    circle(r = 1.8, $fn = 48);
+    for (a = [0 : 45 : 315])
+        rotate(a)
+            translate([0, 3.2])
+                square([0.9, 2.0], center = true);
+}
+
+module icon_heater_fan() {
+    for (angle = [0 : 90 : 270])
         rotate(angle)
-            translate([4, 0]) circle(r = 0.8, $fn = 24);
+            hull() {
+                translate([0, 0.6]) circle(r = 0.5, $fn = 24);
+                translate([3, 0.6]) circle(r = 1.6, $fn = 30);
+            }
+    circle(r = 1.0, $fn = 30);
 }
 
-module icon_heat_coils() {
-    for (row = [-1, 0, 1])
-        translate([0, row * 1.8])
-            stroke_path([[ -4, -1], [ -2, 1], [0, -1], [2, 1], [4, -1]], 0.9);
+module icon_beam_low() {
+    translate([-2.8, 0]) square([4.2, 5.0], center = true);
+    for (i = [0 : 2])
+        translate([1.2 + i * 1.8, -1.5])
+            square([1.0, 1.6], center = true);
 }
 
-module icon_short_beam() {
-    translate([-2.5, 0]) square([3, 5], center = true);
-    for (i = [-1 : 1])
-        translate([1.5 + i * 2, 0])
-            square([1.2, 3 - abs(i)], center = true);
-}
-
-module icon_long_beam() {
-    translate([-3, 0]) square([4, 5.5], center = true);
-    for (i = [-2 : 2])
-        translate([1.8 + i * 1.5, 0])
-            square([1.0, 4], center = true);
+module icon_beam_high() {
+    translate([-2.8, 0]) square([4.2, 5.0], center = true);
+    for (i = [0 : 3])
+        translate([1.2 + i * 1.4, 0])
+            square([1.0, 3.4], center = true);
 }
 
 module stroke_path(points, width) {
