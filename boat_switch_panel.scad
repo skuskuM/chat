@@ -21,10 +21,12 @@ icon_size = 12;
 icon_base_height = 0.5;
 emboss_height = 0.8;
 icon_gap = 3;               // gap between switch center and icon edge
-icon_offset_y = 0;          // additional up/down shift for pictograms
+icon_offset_x = 0;          // horizontal shift for pictograms (left/right)
+icon_offset_y = 0;          // vertical shift for pictograms (up/down)
 text_gap = 4;               // distance from switch perimeter to text baseline
 text_size = 5.8;            // font size for embossed labels
-text_offset_y = 0;          // additional up/down shift for text
+text_offset_x = 0;          // horizontal shift for text (left/right)
+text_offset_y = 0;          // vertical shift for text (up/down)
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
@@ -75,11 +77,11 @@ module embossed_features() {
     for (i = [0 : len(labels) - 1]) {
         pos = hole_position(i);
         icon_center = [
-            pos[0] - (hole_diameter/2 + icon_gap + icon_size/2),
+            pos[0] - (hole_diameter/2 + icon_gap + icon_size/2) + icon_offset_x,
             pos[1] + icon_offset_y
         ];
         text_center = [
-            pos[0] + (hole_diameter/2 + text_gap),
+            pos[0] + (hole_diameter/2 + text_gap) + text_offset_x,
             pos[1] + text_offset_y
         ];
 
