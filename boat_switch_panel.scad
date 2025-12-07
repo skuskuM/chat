@@ -37,8 +37,8 @@ labels = [
     "HI-FI",
     "LIGHTS",
     "HEATER",
-    "BEAM L",
-    "BEAM H"
+    "BEAM\nL",
+    "BEAM\nH"
 ];
 
 module boat_switch_panel() {
