@@ -3,30 +3,30 @@
 panel_thickness = 3;        // base panel thickness
 corner_radius = 4;
 corner_hole_diameter = 4;   // diameter for mounting holes at corners
-mount_hole_offset = 6;      // distance from each edge to mounting hole center
+mount_hole_offset = 5;      // distance from each edge to mounting hole center
 
 rows = 1;
 cols = 8;
 hole_diameter = 11;
 hole_clearance = 0.2;       // extra diameter for drilling clearance
-hole_spacing_x = 22;
-hole_spacing_y = 25;
+hole_spacing_x = 14;
+hole_spacing_y = 12;
 
-panel_margin_x = 34;        // margin from outer switch center to edge
-panel_margin_y = 20;        // margin above/below the switch row
+panel_margin_x = 18;        // margin from outer switch center to edge
+panel_margin_y = 22;        // margin above/below the switch row
 panel_width = (cols - 1) * hole_spacing_x + 2 * panel_margin_x;
 panel_height = hole_diameter + (rows - 1) * hole_spacing_y + 2 * panel_margin_y;
 
-icon_size = 12;
-icon_base_height = 0.5;
-emboss_height = 0.8;
-icon_gap = 3;               // gap between switch center and icon edge
+icon_size = 8;
+icon_base_height = 1.2;
+emboss_height = 0.6;
+icon_gap = -10;             // gap between switch center and icon edge
 icon_offset_x = 0;          // horizontal shift for pictograms (left/right)
-icon_offset_y = 0;          // vertical shift for pictograms (up/down)
-text_gap = 4;               // distance from switch perimeter to text baseline
-text_size = 5.8;            // font size for embossed labels
+icon_offset_y = 12;         // vertical shift for pictograms (up/down)
+text_gap = -4;              // distance from switch perimeter to text baseline
+text_size = 3.0;            // font size for embossed labels
 text_offset_x = 0;          // horizontal shift for text (left/right)
-text_offset_y = 0;          // vertical shift for text (up/down)
+text_offset_y = -17;        // vertical shift for text (up/down)
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
