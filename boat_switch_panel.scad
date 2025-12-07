@@ -21,8 +21,10 @@ icon_size = 12;
 icon_base_height = 0.5;
 emboss_height = 0.8;
 icon_gap = 3;               // gap between switch center and icon edge
+icon_offset_x = 0;          // additional left/right shift for pictograms
 text_gap = 4;               // distance from switch perimeter to text baseline
 text_size = 5.8;            // font size for embossed labels
+text_offset_x = 0;          // additional left/right shift for text
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
@@ -72,8 +74,14 @@ module switch_holes() {
 module embossed_features() {
     for (i = [0 : len(labels) - 1]) {
         pos = hole_position(i);
-        icon_center = [pos[0] - (hole_diameter/2 + icon_gap + icon_size/2), pos[1]];
-        text_center = [pos[0] + (hole_diameter/2 + text_gap), pos[1]];
+        icon_center = [
+            pos[0] - (hole_diameter/2 + icon_gap + icon_size/2) + icon_offset_x,
+            pos[1]
+        ];
+        text_center = [
+            pos[0] + (hole_diameter/2 + text_gap) + text_offset_x,
+            pos[1]
+        ];
 
         translate([icon_center[0], icon_center[1], panel_thickness])
             pictogram_tile(i);
