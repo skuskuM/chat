@@ -22,7 +22,7 @@ icon_base_height = 0.5;
 emboss_height = 0.8;
 icon_gap = 3;               // gap between switch center and icon edge
 text_gap = 4;               // distance from switch perimeter to text baseline
-text_height = 5.8;
+text_size = 5.8;            // font size for embossed labels
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
@@ -81,7 +81,7 @@ module embossed_features() {
         translate([text_center[0], text_center[1], panel_thickness])
             rotate([0, 0, 90])
                 linear_extrude(height = emboss_height)
-                    text(labels[i], size = text_height, font = text_font,
+                    text(labels[i], size = text_size, font = text_font,
                          halign = "center", valign = "center");
     }
 }
