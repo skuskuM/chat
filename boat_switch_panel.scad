@@ -2,7 +2,7 @@
 // Adjust the parameters below to tweak panel, spacing, and embossing.
 panel_thickness = 3;        // base panel thickness
 corner_radius = 4;
-mount_hole_diameter = 4;
+corner_hole_diameter = 4;   // diameter for mounting holes at corners
 mount_hole_offset = 6;      // distance from each edge to mounting hole center
 
 rows = 1;
@@ -21,10 +21,10 @@ icon_size = 12;
 icon_base_height = 0.5;
 emboss_height = 0.8;
 icon_gap = 3;               // gap between switch center and icon edge
-icon_offset_x = 0;          // additional left/right shift for pictograms
+icon_offset_y = 0;          // additional up/down shift for pictograms
 text_gap = 4;               // distance from switch perimeter to text baseline
 text_size = 5.8;            // font size for embossed labels
-text_offset_x = 0;          // additional left/right shift for text
+text_offset_y = 0;          // additional up/down shift for text
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
@@ -59,7 +59,7 @@ module mounting_holes() {
             translate([x_sign * (panel_width/2 - mount_hole_offset),
                        y_sign * (panel_height/2 - mount_hole_offset),
                        -1])
-                cylinder(h = z, d = mount_hole_diameter, $fn = 40);
+                cylinder(h = z, d = corner_hole_diameter, $fn = 40);
 }
 
 module switch_holes() {
@@ -75,12 +75,12 @@ module embossed_features() {
     for (i = [0 : len(labels) - 1]) {
         pos = hole_position(i);
         icon_center = [
-            pos[0] - (hole_diameter/2 + icon_gap + icon_size/2) + icon_offset_x,
-            pos[1]
+            pos[0] - (hole_diameter/2 + icon_gap + icon_size/2),
+            pos[1] + icon_offset_y
         ];
         text_center = [
-            pos[0] + (hole_diameter/2 + text_gap) + text_offset_x,
-            pos[1]
+            pos[0] + (hole_diameter/2 + text_gap),
+            pos[1] + text_offset_y
         ];
 
         translate([icon_center[0], icon_center[1], panel_thickness])
