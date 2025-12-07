@@ -26,10 +26,10 @@ text_height = 5.8;
 text_font = "Liberation Sans:style=Bold";
 
 labels = [
-    "INVERTER 220V",
-    "MULTI MEDIA",
+    "220V",
+    "HI-FI",
     "WIFI",
-    "MULTI MEDIA",
+    "HI-FI",
     "NIGHT LIGHT",
     "WEBASTO",
     "SHORT BEAM",
