@@ -1,0 +1,24 @@
+Nume client,Prenume client,CNP client,Adresa client,Telefon,Mail,Tip Credit,Numar ani credit,Valoare credit (RON),Data intocmire credit,Ora,Agent
+Popescu,Mihai,1931212329022,Sibiu str. Vasile Milea nr13,751793004,popescu.mihai@yahoo.com,Prima casa,30,200000,2007-12-12 00:00:00,12:47:00,Bogdan Boteanu
+Ionescu,Diana,2950713322028,Sibiu str. Postop bl5 ap5,763704432,dianamariaionescu@gmail.com,Credit Imobiliar,14,150000,2005-10-07 00:00:00,15:40:00,Bogdan Boteanu
+Clopa,Maria,2991026399122,Alba Iulia str Ghergeni nr18,754704232,mariaclopa@yahoo.com,Credit de nevoi personale,2,15000,2018-04-13 00:00:00,11:39:00,Sergiu Silva
+Stefan,Vasile,1951112721032,Sibiu str. Lazaret bl28 ap6,732753622,stefn_vasile@yahoo.com,Credit auto,6,35000,2013-07-06 00:00:00,15:20:00,Maria-Cristina Matei
+Gheorge,Ion,1900402329526,Sibiu str. Popesco nr340,721343552,ionmariangheorge@yahoo.com,Credit auto,4,50000,2016-01-01 00:00:00,09:23:00,Denis Popa
+Alexa,Ioana,2990312529622,Sibiu str. Pepe nr.76,751793039,alexa.ioana@yahoo.com,Prima casa,20,250000,2020-03-08 00:00:00,11:04:00,Sergiu Silva
+Oprea,Patricia,2950215329632,Sibiu str. Omega nr2,751794432,oprea.patricia@yahoo.com,Credit Imobliliar,19,80000,2000-02-02 00:00:00,10:47:00,Florin Ilie
+Alexa,Ioana,2990312529622,Sibiu str. Pepe nr.76,751793039,alexa.ioana@yahoo.com,Credit de nevoi personale,1,10000,2019-12-20 00:00:00,08:50:00,Ioana Sima
+Vasile,Alexandra,2990320523822,Medias str. Secundara nr.123,753703032,vasile_alexandra@yahoo.com,Credit auto,8,20000,2017-02-19 00:00:00,12:50:00,Andreea Corpa
+Vlad,Andrei,1980612521682,Sibiu str. Ecuso bl4. ap3,751733422,vlad.andrei@gmail.com,Credit auto,4,45000,2015-09-15 00:00:00,13:45:00,Mihai Vlad
+Posca,Darius,1950812229692,Sibiu str. Graului nr29,721603032,poscadarius12@gmail.com,Prima casa,23,90000,2017-03-02 00:00:00,15:28:00,Florin Ilie
+Popa,George,1970112629662,Sibiu str. Sica nr21,756523332,popaghoerghe20@yahoo.ro,Credit de nevoi personale,1,5000,2020-04-21 00:00:00,10:49:00,Denis Popa
+Marica,Stefania,2931013529582,Rm. Valcea str. Principala nr230,781783832,marica20stefania@gmail.com,Credit auto,5,75000,2018-09-09 00:00:00,09:39:00,Daniel Mihalache
+Valeriu,Andrei,1950712339625,Rm. Valcea str. Principala nr23,722743432,valeriuandrei.mihai@yahoo.com,Credit de nevoi personale,1,15000,2018-07-16 00:00:00,10:11:00,Denis Popa
+Pircu,Valentina,2950112729622,Medias str. Principala nr14,750393032,pircu_andrei_daniel@yahoo.ro,Credit de nevoi personale,1,12000,2021-10-20 00:00:00,09:49:00,Vlad Octav
+Popescu,Mihai,1931212329022,Sibiu str. Vasile Milea nr13,751793004,popescu.mihai@yahoo.com,Credit auto,4,20000,2017-01-02 00:00:00,13:27:00,Ioan Vladimir
+Goca,Marian,1900323524622,Medias str. Secundara nr22,757743052,gocamarian@yahoo.ro,Prima casa,30,120000,2009-03-12 00:00:00,15:32:00,Denis Popa
+Vinca,Maria,2920318530672,Rm. Valcea str. Principala nr.14,733795032,vinca_maria@yahoo.ro,Credit Imobiliar,24,90000,2010-08-05 00:00:00,12:40:00,Ioana Sima
+Posca,Darius,1950812229692,Sibiu str. Graului nr29,721603032,poscadarius12@gmail.com,Credit auto,5,75000,2012-09-10 00:00:00,15:28:00,Maria-Cristina Matei
+Jopa,Mariana,2970916529639,Sibiu str. Gusterita nr14,751733032,jospamariana@gmail.com,Credit de nevoi personale,1,7500,2012-04-12 00:00:00,16:30:00,Maria-Cristina Matei
+Ionescu,Diana,2950713322028,Sibiu str. Postop bl5 ap5,763704432,dianamariaionescu@gmail.com,Prima casa,24,80000,2000-10-20 00:00:00,10:45:00,Mihai Vlad
+Alexa,Ioana,2990312529622,Sibiu str. Pepe nr.76,751793039,alexa.ioana@yahoo.com,Credit de nevoi personale,1,6500,2020-02-14 00:00:00,09:04:00,Andreea Corpa
+Stefan,Vasile,1951112721032,Sibiu str. Lazaret bl28 ap6,751793039,stefn_vasile@yahoo.com,Credit de nevoi personale,1,10000,2016-02-07 00:00:00,15:09:00,Florin Ilie
